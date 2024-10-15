@@ -4,7 +4,7 @@ This project demonstrates a **highly available, scalable VPC architecture** usin
 ---
 
 ## 📜 Architecture Overview
-![archi]()
+![archi](https://github.com/chahid001/The-Architects-Grid/blob/main/assets/aws-archi.png)
 ### 🛠️ Components:
 - **2 VPCs**: 
   - VPC 1: `192.168.0.0/16` (contains the bastion host)
@@ -62,8 +62,8 @@ variable "app-vm-role" {
 1. **Create Golden AMI**:
    - Install **Apache**, **Git**, and **CloudWatch Agent** on a base EC2 instance.
    - Push custom **memory metrics** to **CloudWatch**.
-   
-   ```json
+
+```json
     {
         "metrics":{
            "metrics_collected":{
@@ -79,14 +79,14 @@ variable "app-vm-role" {
            }
         }
     }
-   ```
-        - Copy the metrics file to :
-            ```bash
+``` 
+  - Copy the metrics file to :
+        ```bash
                 /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
-            ``` 
+        ``` 
    - Save this as an **AMI** to be used for auto-scaling instances.
    
-2. **S3 Bucket**:
+3. **S3 Bucket**:
    - Create an **S3 bucket** and upload the app (`index.html`).
 
 ### **Terraform Steps**:
