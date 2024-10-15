@@ -81,11 +81,9 @@ variable "app-vm-role" {
            }
         }
     }
-``` 
-  - Copy the metrics file to :
-        ```bash
-                /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
-        ``` 
+```
+
+   - Copy the metrics file to : ```/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json``` 
    - Save this as an **AMI** to be used for auto-scaling instances.
    
 3. **S3 Bucket**:
@@ -94,20 +92,26 @@ variable "app-vm-role" {
 ### **Terraform Steps**:
 
 1. Clone the repository and initialize Terraform:
+   
    ```bash
    git clone https://github.com/your-repo/vpc-architecture-grid.git
    cd Terraform
    terraform init
    ```
+   
 2. Plan and apply Terraform configuration:
+   
    ```bash
    terraform plan
    terraform apply
    ```
+
 3. Once deployed, SSH into the **bastion host** using the public IP for testing:
+
    ```bash
    ssh -i ~/.ssh/your-key.pem ec2-user@<bastion-public-ip>
    ```
+
 4. Access your app through the **Load Balancer DNS name** in a browser.
 
 ![web-app](https://github.com/chahid001/The-Architects-Grid/blob/main/assets/web-app.png)
