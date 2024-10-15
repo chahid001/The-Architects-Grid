@@ -1,10 +1,10 @@
 resource "aws_vpc" "vpc01" {
   
-  cidr_block = "192.168.0.0/16"
-
-  tags = {
-    Name = "vpc-01"
-  }
+    cidr_block = "192.168.0.0/16"
+    
+    tags = {
+      Name = "vpc-01"
+    }
 }
 
 resource "aws_vpc" "vpc02" {

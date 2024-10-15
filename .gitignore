@@ -3,5 +3,5 @@ Terraform/terraform.tfstate
 Terraform/terraform.tfstate.backup
 Terraform/.terraform
 Terraform/.terraform.lock.hcl
-Terraform/variables.tf
+Terraform/*/variables.tf
 .vscode
