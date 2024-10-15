@@ -20,6 +20,8 @@ This project demonstrates a **highly available, scalable VPC architecture** usin
 - **Application Load Balancer (ALB)**: Distributes traffic across the instances in private subnets (zones A and B)
 - **Auto Scaling Group**: Ensures dynamic scaling of the instances
 
+![vpc2](https://github.com/chahid001/The-Architects-Grid/blob/main/assets/vpc-routing.png)
+
 ---
 
 ## 🔍 Key Concepts
@@ -107,6 +109,8 @@ variable "app-vm-role" {
    ssh -i ~/.ssh/your-key.pem ec2-user@<bastion-public-ip>
    ```
 4. Access your app through the **Load Balancer DNS name** in a browser.
+
+![web-app](https://github.com/chahid001/The-Architects-Grid/blob/main/assets/web-app.png)
 
 ---
 
