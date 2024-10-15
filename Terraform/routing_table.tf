@@ -33,10 +33,10 @@ resource "aws_route_table" "vpc02-rt-pub" {
         gateway_id = aws_internet_gateway.igw2.id
     }
 
-    route {
-        cidr_block = "192.168.0.0/16"
-        gateway_id = aws_ec2_transit_gateway.ts.id
-    }
+    # route {
+    #     cidr_block = "192.168.0.0/16"
+    #     gateway_id = aws_ec2_transit_gateway.ts.id
+    # }
 
     tags = {
       Name = "route-table-public-vpc2"
